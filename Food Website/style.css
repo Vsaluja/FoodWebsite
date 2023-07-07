@@ -1,0 +1,276 @@
+/* CSS Reset */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+#navbar {
+    z-index: 2;
+    display: flex;
+    padding: 5px 0px;
+    margin-bottom: 20px;
+    top: 0px;
+    align-items: center;
+    justify-content: space-between;
+    /* height: 100px; */
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    position: fixed;
+    /* opacity: 0.8; */
+}
+
+/* #navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1;
+} */
+
+#logo {
+    margin: 5px 40px;
+}
+
+#logo img {
+    border: 7px solid #172337;
+    border-radius: 100px;
+    height: 80px;
+    width: 80px;
+}
+
+#navbar ul {
+    display: flex;
+    margin: 0px 60px;
+
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.1rem;
+    font-family: sans-serif;
+}
+
+#navbar ul li a {
+    font-weight: bold;
+    font-family: 'Righteous', cursive;
+    color: white;
+    padding: 8px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid transparent;
+}
+
+
+#navbar ul li a:hover {
+    color: white;
+    background-color: #172337;
+    /* border-radius: 20px; */
+    border: 1px solid #172337;
+    transition: 0.4s;
+}
+
+#navbar ul li .act {
+    font-family: 'Righteous', cursive;
+    font-weight: bold;
+    color: white;
+    padding: 8px 20px;
+    background-color: #172337;
+    text-decoration: none;
+    border-radius: 20px;
+    border: 1px solid #172337;
+}
+
+/* Home Section */
+
+/* When flex direction is column use align items center to make them in  center on x axis */
+
+/* align-items aligns flex items along the cross axis, which is always perpendicular to the main axis. Depending on the flex-direction , the main axis may be horizontal or vertical. Since flex-direction:column means the main axis is vertical, you need to use justify-content not align-items to center the flex items */
+
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 230px 50px 200px 50px;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid black; */
+    /* height: 800px; */
+    /* position: relative; */
+}
+
+#home::before {
+    content: "";
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(Background.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding-top: 50rem;
+    /* height: 760px; */
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+
+}
+
+
+/* Utility Classes */
+
+#home .h-primary {
+    font-size: 3.4rem;
+    font-family: 'Righteous', cursive;
+    color: white;
+    text-shadow: 10px 5px 4px #172337;
+    margin: 30px 5px;
+}
+
+#home p {
+    text-align: center;
+    padding: 20px 20px;
+    font-size: 20px;
+    color: white;
+    text-shadow: 3px 3px 3px #172337;
+    font-weight: bold;
+}
+
+#home .btn {
+    font-family: 'Righteous', cursive;
+    cursor: pointer;
+    background-color: #172337;
+    padding: 10px 20px;
+    color: white;
+    margin: 30px;
+    border-radius: 20px;
+    border: 1px solid #172337;
+    font-weight: bold;
+    font-size: 17px;
+    box-shadow: 4px 4px 6px #172337;
+}
+
+#home .btn:hover {
+    content: 'Phone';
+    color: black;
+}
+
+.center {
+    text-align: center;
+    padding: 30px;
+}
+
+.h-primary2 {
+    text-align: center;
+    padding: 5px;
+    background: #172337;
+    border-radius: 20px;
+    color: white;
+    margin: 10px;
+    border: 1px solid black;
+    font-family: 'Righteous', cursive;
+    font-size: 2.8rem;
+    box-shadow: 7px 4px 10px #172337;
+}
+
+.h-secondary {
+    font-size: 2.8rem;
+    color: #172337;
+    padding: 12px;
+    text-shadow: 2px 2px 6px #172337;
+}
+
+
+/* Services Section */
+
+
+.services-container {
+    font-family: 'Righteous', cursive;
+    display: flex;
+    /* border: 4px solid black; */
+    margin-top: 80px;
+    padding: 10px 70px;
+    flex-direction: column;
+}
+
+#services {
+    display: flex;
+    margin: 30px 10px;
+    justify-content: center;
+    /* border: 2px solid red; */
+
+}
+
+#services .box {
+    background-color: #e0e5ed;
+    margin: 5px 20px;
+    padding: 20px 20px;
+    /* padding: 20px; */
+    border-radius: 20px;
+    /* Can also use flexbox but using flexbox makes the images move a little bit in the box */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 27%;
+    /* Giving box a height was causing the the inner content to adjust to the max height which was 600px and the image started to change position when making it responsive */
+    /* height: 600px;  */
+    border: 2px solid #172337;
+    box-shadow: 3px 3px 10px black;
+}
+
+#services .box img {
+    height: 15rem;
+    /* margin: auto;
+    display: block; */
+    /* position: relative; */
+}
+
+#services .box .img2 {
+    position: relative;
+    left: 50px;
+}
+
+#contact {
+    font-family: 'Righteous', cursive;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin: 50px auto 0px auto;
+    background-color: #172337;
+}
+
+
+#contact .c {
+    color: white;
+    font-size: 3rem;
+    margin: 20px;
+}
+
+#contact form {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+#contact form input {
+    width: 400px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#contact .msg {
+    height: 100px;
+}
+
+#contact h4 {
+    margin-top: 20px;
+    font-family: sans-serif;
+    color: white;
+    font-weight: bold;
+}
